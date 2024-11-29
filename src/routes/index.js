@@ -9,7 +9,6 @@ const router = Router();
 router.get("/plantas", async (req, res) => {
     const querySnapshot = await db.collection('plantas').get();
     const plantas = querySnapshot.docs.map(doc => doc.data());
-    console.log(plantas);
     //Mandar los datos al front
     res.json(plantas);
 });
@@ -18,6 +17,7 @@ router.get("/plantas", async (req, res) => {
 router.post("/agregar-planta", async (req, res) =>{
     const {nombrePlanta, apodo, descripcion, imagen} = req.body;
     await db.collection('plantas').doc().set({
+        id,
         nombrePlanta,
         apodo,
         descripcion,
