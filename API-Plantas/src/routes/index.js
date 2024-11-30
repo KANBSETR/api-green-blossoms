@@ -17,7 +17,6 @@ router.get("/plantas", async (req, res) => {
 router.post("/agregar-planta", async (req, res) =>{
     const {nombrePlanta, apodo, descripcion, imagen} = req.body;
     await db.collection('plantas').doc().set({
-        id,
         nombrePlanta,
         apodo,
         descripcion,
