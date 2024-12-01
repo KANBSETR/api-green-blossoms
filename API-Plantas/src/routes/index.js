@@ -1,4 +1,3 @@
-const { Model } = require("firebase-admin/machine-learning");
 const { db } = require("../firebase");
 
 const { Router } = require("express");
@@ -28,7 +27,7 @@ router.post("/agregar-planta", async (req, res) =>{
 //Eliminar una planta
 router.get("/eliminar-planta/:id", async (req, res) => {
     await db.collection('plantas').doc(req.params.id).delete();
-    res.redirect('http://localhost:8100'); //Habría que redirigir a la lista de las plantas
+    res.redirect('http://localhost:8100'); 
 });
 
 //Obtener una planta
