@@ -1,8 +1,8 @@
 node_modules
 .env
-firebase-key-planta.json
+firebase-key-plantas.json
 firebase-key-temperatura.json
 firebase-key-luminosidad.json
 firebase-key-humedad.json
-firebase-key-usuario.json
+firebase-key-usuarios.json
 
